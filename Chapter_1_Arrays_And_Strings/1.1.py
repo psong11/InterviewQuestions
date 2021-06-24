@@ -2,17 +2,19 @@
 # Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
 
 def isUnique(str):
-    num = 0
+    # create blank hashmap (dict)
     existingLetters = {}
+    # iterate through each letter in the string
     for index, letter in enumerate(str):
+        # if the letter already existed somewhere earlier in the string, continue
         if letter in existingLetters:
             continue
         else:
-            num += 1
+            # add the current letter to the hashmap (dict)
             existingLetters[letter] = index
-    print(num)
+    return len(existingLetters)
 
 
-isUnique("strawberry")  # should print 8
-isUnique("Paul")  # should print 4
-isUnique("I like it.")  # should print 8
+print(isUnique("strawberry"))  # should print 8
+print(isUnique("Paul"))  # should print 4
+print(isUnique("I like it."))  # should print 8
