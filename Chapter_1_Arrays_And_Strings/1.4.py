@@ -7,3 +7,36 @@
 # Current Solution
 # Time Complexity:
 # Space Complexity:
+
+def palPerm(str):
+    str = str.replace(" ", "")
+    str = str.lower()
+    # sort the string
+    # iterate through the string checking if each letter and the letter immediately after it is the same letter
+    letterCount = {}
+    for char in str:
+        if char in letterCount:
+            letterCount[char] += 1
+        else:
+            letterCount[char] = 1
+    print(letterCount)
+
+    if len(str) % 2 == 0:  # even length
+        for letter in letterCount:
+            if letterCount[letter] % 2 != 0:
+                return False
+        return True
+    else:  # odd length
+        lettersWithOddQuantity = 0
+        for letter in letterCount:
+            if lettersWithOddQuantity > 1:
+                return False
+            if letterCount[letter] % 2 != 0:
+                lettersWithOddQuantity += 1
+
+    return True
+
+
+print(palPerm("taco cat"))
+print(palPerm("TaCo cAt"))
+print(palPerm("hello world"))
