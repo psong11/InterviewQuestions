@@ -3,3 +3,7 @@
 # A palindrome is a word or phrase that is the same forwards or backwards.
 # A permutation is a rearrangement of letters.
 # A palindrome does not need to be limited to just dictionary words.
+
+# Current Solution
+# Time Complexity:
+# Space Complexity:
