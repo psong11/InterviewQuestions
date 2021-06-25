@@ -19,7 +19,6 @@ def palPerm(str):
             letterCount[char] += 1
         else:
             letterCount[char] = 1
-    print(letterCount)
 
     if len(str) % 2 == 0:  # even length
         for letter in letterCount:
@@ -27,12 +26,12 @@ def palPerm(str):
                 return False
         return True
     else:  # odd length
-        lettersWithOddQuantity = 0
-        for letter in letterCount:
-            if lettersWithOddQuantity > 1:
+        hasOdd = False
+        for value in letterCount.values():
+            if hasOdd:
                 return False
-            if letterCount[letter] % 2 != 0:
-                lettersWithOddQuantity += 1
+            if value % 2 != 0:
+                hasOdd = True
 
     return True
 
@@ -40,3 +39,5 @@ def palPerm(str):
 print(palPerm("taco cat"))
 print(palPerm("TaCo cAt"))
 print(palPerm("hello world"))
+print(palPerm("car race"))
+print(palPerm("car racer"))
