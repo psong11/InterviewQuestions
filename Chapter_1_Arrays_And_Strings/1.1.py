@@ -1,20 +1,24 @@
 # isUnique
 # Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
 
+# Current Solution
+# Time Complexity: O(1)
+# Space Complexity: O(n) where n is length of string.
+
 def isUnique(str):
-    # create blank hashmap (dict)
+    if len(str) > 128:
+        return False
+
     existingLetters = {}
-    # iterate through each letter in the string
-    for index, letter in enumerate(str):
-        # if the letter already existed somewhere earlier in the string, continue
+    for letter in str:
         if letter in existingLetters:
-            continue
+            return False
         else:
-            # add the current letter to the hashmap (dict)
-            existingLetters[letter] = index
-    return len(existingLetters)
+            existingLetters[letter] = True
+    return True
 
 
-print(isUnique("strawberry"))  # should print 8
-print(isUnique("Paul"))  # should print 4
-print(isUnique("I like it."))  # should print 8
+print(isUnique("r"))  # should print True
+print(isUnique("strawberry"))  # should print False
+print(isUnique("Paul"))  # should print True
+print(isUnique("Piper"))  # should print True
