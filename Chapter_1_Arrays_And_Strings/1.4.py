@@ -5,8 +5,8 @@
 # A palindrome does not need to be limited to just dictionary words.
 
 # Current Solution
-# Time Complexity:
-# Space Complexity:
+# Time Complexity: O(n) + O(v) where n is the length of the string and v is the number of unique letters.
+# Space Complexity: O(n) where n is the number of unique letters. (Technically O(1) because there are only 26 unique characters)
 
 def palPerm(str):
     str = str.replace(" ", "")
