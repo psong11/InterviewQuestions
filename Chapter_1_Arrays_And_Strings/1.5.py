@@ -4,8 +4,8 @@
 # Given two strings, write a function to check if they are one edit (or zero edits) away.
 
 # Current Solution
-# Time Complexity:
-# Space Complexity:
+# Time Complexity: O(n) where n is the length of the shorter string.
+# Space Complexity: O(1)
 
 # three cases: two insertions, an insertion and change, two changes
 
