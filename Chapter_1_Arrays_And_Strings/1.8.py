@@ -5,3 +5,9 @@
 # Current Solution
 # Time Complexity:
 # Space Complexity:
+
+def zeroMatrix(matrix):
+    pass
+
+
+print(zeroMatrix())
