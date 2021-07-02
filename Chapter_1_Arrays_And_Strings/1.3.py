@@ -31,7 +31,7 @@ def URLify(str, length):
             URL[writer] = str[reader]
             writer -= 1
         reader -= 1
-    return URL
+    return "".join(URL)
 
 
 print(URLify("I like bread.", 13))  # should print "I%20like%20bread."
