@@ -9,8 +9,8 @@ use a runner implementation in order to check for duplicates in place, without
 needing to use an external data structure.
 
 Current Solution
-Time Complexity: 
-Space Complexity:
+Time Complexity: O(n) where n is the length of the linked list.
+Space Complexity: O(n) where n is the number of unique node data.  
 */
 
 import java.util.*; // just for hash set
