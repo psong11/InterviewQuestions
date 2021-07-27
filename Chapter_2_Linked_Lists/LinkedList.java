@@ -41,4 +41,14 @@ public class LinkedList {
         }
         System.out.println(n.data);
     }
+
+    public int length() {
+        Node n = head;
+        int length = 0;
+        while (n.next != null) {
+            length++;
+            n = n.next;
+        }
+        return length + 1;
+    }
 }

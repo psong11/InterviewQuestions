@@ -16,38 +16,8 @@ Space Complexity: O(n) where n is the number of unique node data.
 import java.util.*; // just for hash set
 
 public class removeDups {
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.insert(10);
-        list.insert(8);
-        list.insert(10);
-        list.insert(4);
-        list.insert(2);
-        list.insert(123);
-        list.insert(2);
-        list.show();
-        System.out.println("Before");
-        removeDuplicates(list);
-        list.show();
-        System.out.println("After");
-        list.clear();
 
-        list.insert(1);
-        list.insert(2);
-        list.insert(2);
-        list.insert(2);
-        list.insert(5);
-        list.insert(6);
-        list.insert(7);
-        list.show();
-        System.out.println("Before");
-        removeDuplicates(list);
-        list.show();
-        System.out.println("After");
-
-    }
-
-    static void removeDuplicates(LinkedList list) {
+    static void removeDupsMethod(LinkedList list) {
         HashSet<Integer> set = new HashSet<Integer>();
         // set the head node to n so that I can iterate through it
         Node n = list.head;
